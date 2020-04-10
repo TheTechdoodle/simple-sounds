@@ -6,6 +6,7 @@ Supported events are:
  - Player command
  - Player chat
  - Chat mention (when a chat message contains your username)
+ - Arrow hit mob
 
 Commands:
  - /ss reload\
@@ -48,6 +49,11 @@ player_chat:
 chat_mention:
   enabled: true
   name: BLOCK_NOTE_BLOCK_BIT
+  pitch: 1.0
+  volume: 1.0
+arrow_hit_mob:
+  enabled: true
+  name: ENTITY_ARROW_HIT_PLAYER
   pitch: 1.0
   volume: 1.0
 ```

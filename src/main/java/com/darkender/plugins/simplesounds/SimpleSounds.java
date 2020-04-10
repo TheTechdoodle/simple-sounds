@@ -27,6 +27,8 @@ public class SimpleSounds extends JavaPlugin
     {
         saveDefaultConfig();
         reloadConfig();
+        getConfig().options().copyDefaults(true);
+        saveConfig();
         
         sounds.clear();
         for(SimpleSoundEvent event : SimpleSoundEvent.values())

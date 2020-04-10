@@ -7,5 +7,5 @@ public enum SimpleSoundEvent
     PLAYER_COMMAND,
     PLAYER_CHAT,
     CHAT_MENTION,
-    BOW_HIT_MOB
+    ARROW_HIT_MOB
 }

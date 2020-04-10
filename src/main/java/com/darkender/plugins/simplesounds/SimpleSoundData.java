@@ -23,6 +23,10 @@ public class SimpleSoundData
         this.enabled = enabled;
     }
     
+    /**
+     * Plays the sound to the specified player but only if enabled
+     * @param player The player to play the sound to
+     */
     public void play(Player player)
     {
         if(!enabled)

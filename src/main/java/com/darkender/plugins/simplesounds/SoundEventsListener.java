@@ -112,7 +112,7 @@ public class SoundEventsListener implements Listener
                 return;
             }
             
-            SimpleSoundData sound = simpleSounds.getSound(SimpleSoundEvent.BOW_HIT_MOB);
+            SimpleSoundData sound = simpleSounds.getSound(SimpleSoundEvent.ARROW_HIT_MOB);
             if(sound.isEnabled())
             {
                 sound.play((Player) arrow.getShooter());

@@ -23,7 +23,7 @@ chat_mention:
   name: BLOCK_NOTE_BLOCK_BIT
   pitch: 1.0
   volume: 1.0
-bow_hit_mob:
+arrow_hit_mob:
   enabled: true
   name: ENTITY_ARROW_HIT_PLAYER
   pitch: 1.0
