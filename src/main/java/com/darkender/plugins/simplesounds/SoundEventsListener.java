@@ -16,8 +16,8 @@ import java.util.List;
 
 public class SoundEventsListener implements Listener
 {
-    private SimpleSounds simpleSounds;
-    private List<String> testCommandNames = new ArrayList<>();
+    private final SimpleSounds simpleSounds;
+    private final List<String> testCommandNames = new ArrayList<>();
     
     public SoundEventsListener(SimpleSounds simpleSounds)
     {
@@ -60,14 +60,9 @@ public class SoundEventsListener implements Listener
         }
     }
     
-    @EventHandler(priority = EventPriority.MONITOR)
+    @EventHandler(priority = EventPriority.MONITOR, ignoreCancelled = true)
     public void onPlayerChat(AsyncPlayerChatEvent event)
     {
-        if(event.isCancelled())
-        {
-            return;
-        }
-        
         SimpleSoundData sound = simpleSounds.getSound(SimpleSoundEvent.PLAYER_CHAT);
         
         String upperMsg = event.getMessage().toUpperCase();
@@ -84,14 +79,9 @@ public class SoundEventsListener implements Listener
         }
     }
     
-    @EventHandler(priority = EventPriority.MONITOR)
+    @EventHandler(priority = EventPriority.MONITOR, ignoreCancelled = true)
     public void onPlayerCommand(PlayerCommandPreprocessEvent event)
     {
-        if(event.isCancelled())
-        {
-            return;
-        }
-        
         SimpleSoundData sound = simpleSounds.getSound(SimpleSoundEvent.PLAYER_COMMAND);
         if(sound.isEnabled())
         {

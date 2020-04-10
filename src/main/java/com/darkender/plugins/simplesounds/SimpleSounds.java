@@ -10,8 +10,8 @@ import java.util.HashMap;
 
 public class SimpleSounds extends JavaPlugin
 {
-    private HashMap<SimpleSoundEvent, SimpleSoundData> sounds = new HashMap<>();
-    private String[] requiredKeys = {"enabled", "name", "pitch", "volume"};
+    private final HashMap<SimpleSoundEvent, SimpleSoundData> sounds = new HashMap<>();
+    private final String[] requiredKeys = {"enabled", "name", "pitch", "volume"};
     
     @Override
     public void onEnable()
