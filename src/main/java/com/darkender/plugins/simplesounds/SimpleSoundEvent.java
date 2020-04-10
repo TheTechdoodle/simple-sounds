@@ -6,5 +6,6 @@ public enum SimpleSoundEvent
     PLAYER_QUIT,
     PLAYER_COMMAND,
     PLAYER_CHAT,
-    CHAT_MENTION
+    CHAT_MENTION,
+    BOW_HIT_MOB
 }

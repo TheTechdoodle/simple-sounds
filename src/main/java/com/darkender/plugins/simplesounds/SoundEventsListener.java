@@ -2,10 +2,14 @@ package com.darkender.plugins.simplesounds;
 
 import org.bukkit.Bukkit;
 import org.bukkit.command.PluginCommand;
+import org.bukkit.entity.Arrow;
+import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
+import org.bukkit.event.entity.EntityDamageByEntityEvent;
+import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 import org.bukkit.event.player.PlayerCommandPreprocessEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
@@ -93,6 +97,26 @@ public class SoundEventsListener implements Listener
                 }
             }
             sound.play(event.getPlayer());
+        }
+    }
+    
+    @EventHandler(priority = EventPriority.MONITOR, ignoreCancelled = true)
+    public void onEntityDamageByEntity(EntityDamageByEntityEvent event)
+    {
+        if(event.getDamager().getType() == EntityType.ARROW &&
+           event.getCause() == EntityDamageEvent.DamageCause.PROJECTILE)
+        {
+            Arrow arrow = (Arrow) event.getDamager();
+            if(!(arrow.getShooter() instanceof Player))
+            {
+                return;
+            }
+            
+            SimpleSoundData sound = simpleSounds.getSound(SimpleSoundEvent.BOW_HIT_MOB);
+            if(sound.isEnabled())
+            {
+                sound.play((Player) arrow.getShooter());
+            }
         }
     }
 }
