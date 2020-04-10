@@ -105,7 +105,8 @@ public class SoundEventsListener implements Listener
     public void onEntityDamageByEntity(EntityDamageByEntityEvent event)
     {
         if(event.getDamager().getType() == EntityType.ARROW &&
-           event.getCause() == EntityDamageEvent.DamageCause.PROJECTILE)
+           event.getCause() == EntityDamageEvent.DamageCause.PROJECTILE &&
+           event.getEntity().getType() != EntityType.PLAYER)
         {
             Arrow arrow = (Arrow) event.getDamager();
             if(!(arrow.getShooter() instanceof Player))
