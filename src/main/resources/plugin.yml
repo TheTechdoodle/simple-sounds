@@ -1,0 +1,19 @@
+name: SimpleSounds
+version: ${project.version}
+api-version: 1.15
+main: com.darkender.plugins.simplesounds.SimpleSounds
+author: Techdoodle
+description: Simple event-based sounds for your server
+commands:
+  simplesounds:
+    description: The SimpleSounds base command
+    aliases: ["ss"]
+    permission: "simplesounds.cmd"
+    usage: "Usage: /simplesounds [test|reload]"
+permissions:
+  simplesounds.cmd:
+    description: Base command for SimpleSounds commands
+  simplesounds.cmd.reload:
+    description: Permission to reload the SimpleSounds config
+  simplesounds.cmd.test:
+    description: Permission to test a sound

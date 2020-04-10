@@ -1,0 +1,25 @@
+player_join:
+  enabled: true
+  name: BLOCK_NOTE_BLOCK_PLING
+  pitch: 1.0
+  volume: 1.0
+player_quit:
+  enabled: true
+  name: BLOCK_NOTE_BLOCK_BASS
+  pitch: 1.0
+  volume: 1.0
+player_command:
+  enabled: true
+  name: ENTITY_ITEM_PICKUP
+  pitch: 1.5
+  volume: 1.0
+player_chat:
+  enabled: true
+  name: ENTITY_ITEM_PICKUP
+  pitch: 1.0
+  volume: 0.5
+chat_mention:
+  enabled: true
+  name: BLOCK_NOTE_BLOCK_BIT
+  pitch: 1.0
+  volume: 1.0
