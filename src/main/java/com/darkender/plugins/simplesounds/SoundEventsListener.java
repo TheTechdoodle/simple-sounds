@@ -10,6 +10,7 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
+import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 import org.bukkit.event.player.PlayerCommandPreprocessEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
@@ -117,6 +118,16 @@ public class SoundEventsListener implements Listener
             {
                 sound.play((Player) arrow.getShooter());
             }
+        }
+    }
+    
+    @EventHandler
+    public void onPlayerDeath(PlayerDeathEvent event)
+    {
+        SimpleSoundData sound = simpleSounds.getSound(SimpleSoundEvent.PLAYER_DEATH);
+        if(sound.isEnabled())
+        {
+            sound.play(event.getEntity().getLocation());
         }
     }
 }

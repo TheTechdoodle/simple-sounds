@@ -5,6 +5,7 @@ Supported events are:
  - Player quit
  - Player command
  - Player chat
+ - Player death
  - Chat mention (when a chat message contains your username)
  - Arrow hit mob
 
@@ -54,6 +55,11 @@ chat_mention:
 arrow_hit_mob:
   enabled: true
   name: ENTITY_ARROW_HIT_PLAYER
+  pitch: 1.0
+  volume: 1.0
+player_death:
+  enabled: true
+  name: ENTITY_VILLAGER_DEATH
   pitch: 1.0
   volume: 1.0
 ```

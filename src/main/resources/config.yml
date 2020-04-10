@@ -28,3 +28,8 @@ arrow_hit_mob:
   name: ENTITY_ARROW_HIT_PLAYER
   pitch: 1.0
   volume: 1.0
+player_death:
+  enabled: true
+  name: ENTITY_VILLAGER_DEATH
+  pitch: 1.0
+  volume: 1.0

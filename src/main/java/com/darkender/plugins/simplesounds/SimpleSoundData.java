@@ -1,5 +1,6 @@
 package com.darkender.plugins.simplesounds;
 
+import org.bukkit.Location;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 
@@ -34,6 +35,19 @@ public class SimpleSoundData
             return;
         }
         player.playSound(player.getLocation(), sound, volume, pitch);
+    }
+    
+    /**
+     * Plays the sound to the specified location but only if enabled
+     * @param location The player to play the sound to
+     */
+    public void play(Location location)
+    {
+        if(!enabled)
+        {
+            return;
+        }
+        location.getWorld().playSound(location, sound, volume, pitch);
     }
     
     public Sound getSound()
