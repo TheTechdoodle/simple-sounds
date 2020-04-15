@@ -35,8 +35,10 @@ public class SoundEventsListener implements Listener
         int originalLength = testCommandNames.size();
         for(int i = 0; i < originalLength; i++)
         {
-            testCommandNames.add(simpleSounds.getName().toLowerCase() + ":" + testCommandNames.get(i));
+            testCommandNames.add(simpleSounds.getName().toLowerCase() + ":" + testCommandNames.get(i) + " test");
         }
+        testCommandNames.add("playsound");
+        testCommandNames.add("minecraft:playsound");
     }
     
     @EventHandler
@@ -92,7 +94,7 @@ public class SoundEventsListener implements Listener
         {
             for(String commandName : testCommandNames)
             {
-                if(event.getMessage().startsWith("/" + commandName + " test"))
+                if(event.getMessage().startsWith("/" + commandName))
                 {
                     return;
                 }
