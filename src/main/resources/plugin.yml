@@ -1,6 +1,6 @@
 name: SimpleSounds
 version: ${project.version}
-api-version: 1.15
+api-version: 1.13
 main: com.darkender.plugins.simplesounds.SimpleSounds
 author: Techdoodle
 description: Simple event-based sounds for your server
